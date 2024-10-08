@@ -7,7 +7,7 @@ const ShadeText = ({ features }) => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentIndex((prevIndex) => (prevIndex + 1) % features.length);
-		}, 3000); // Show each item for 3 seconds
+		}, 3000);
 
 		return () => clearInterval(interval); // Cleanup on unmount
 	}, [features.length]);
