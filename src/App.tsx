@@ -12,7 +12,7 @@ function App() {
     searchMovie: useRef(null),
     searchSimilarSongs: useRef(null),
     identifyGenre: useRef(null),
-    playlistByMood: useRef(null),
+    faq: useRef(null),
   };
   const scrollToSection = (section) => {
     sectionRefs[section].current.scrollIntoView({ behavior: "smooth" });

@@ -22,18 +22,18 @@ const Navbar = ({ scrollToSection }) => {
           <button onClick={() => scrollToSection("improveQuality")}>
             Улучшение JPG
           </button>
-          <button onClick={() => scrollToSection("searchMovie")}>
-            Поиск фильмов
-          </button>
+          <button onClick={() => scrollToSection("searchMovie")}>Фильмы</button>
           <button onClick={() => scrollToSection("searchSimilarSongs")}>
-            Похожие песни
+            Песни
           </button>
           <button onClick={() => scrollToSection("identifyGenre")}>
-            Жанр песни
+            Жанры
           </button>
-          <button onClick={() => scrollToSection("playlistByMood")}>
-            Плейлист по настроению
-          </button>
+
+          <button onClick={() => scrollToSection("faq")}>FAQ</button>
+          <a className="block text-white py-2 px-4 bg-[#0F172A] rounded-[6px]">
+            Telegram Bot
+          </a>
         </div>
         {/* Mobile Menu */}
         <div className="md:hidden flex items-center">
@@ -70,26 +70,28 @@ const Navbar = ({ scrollToSection }) => {
           onClick={() => scrollToSection("searchMovie")}
           className="block text-white py-2 px-4 hover:bg-gray-700"
         >
-          Поиск фильмов
+          Фильмы
         </button>
         <button
           onClick={() => scrollToSection("searchSimilarSongs")}
           className="block text-white py-2 px-4 hover:bg-gray-700"
         >
-          Похожие песни
+          Песни
         </button>
         <button
           onClick={() => scrollToSection("identifyGenre")}
           className="block text-white py-2 px-4 hover:bg-gray-700"
         >
-          Жанр песни
+          Жанры
         </button>
-        <button
-          onClick={() => scrollToSection("playlistByMood")}
-          className="block text-white py-2 px-4 hover:bg-gray-700"
+
+        <button onClick={() => scrollToSection("faq")}>FAQ</button>
+        <a
+          href="/"
+          className="block text-white py-2 px-4 bg-[#0F172A] rounded-[6px]"
         >
-          Плейлист по настроению
-        </button>
+          Telegram Bot
+        </a>
       </div>
     </nav>
   );
