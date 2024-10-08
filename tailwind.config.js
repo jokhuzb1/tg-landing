@@ -9,9 +9,19 @@ export default {
 					"0%": { transform: "translateX(0)" },
 					"100%": { transform: "translateX(-50%)" },
 				},
+				fade: {
+					"0%, 100%": { opacity: 0 },
+					"10%, 90%": { opacity: 1 },
+				},
+				fadeInOut: {
+					"0%, 100%": { opacity: 0 },
+					"20%, 80%": { opacity: 1 },
+				},
 			},
 			animation: {
-				scroll: "scroll 30s linear infinite",
+				scroll: "scroll 5s linear infinite",
+				"fade-item": "fade 5s infinite",
+				"fade-sequence": "fadeInOut 5s infinite",
 			},
 			borderRadius: {
 				lg: "var(--radius)",
