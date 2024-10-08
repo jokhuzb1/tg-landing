@@ -46,6 +46,7 @@ const Head = () => {
       <Reviews />
     </header>
   );
+
 };
 
 export default Head;
