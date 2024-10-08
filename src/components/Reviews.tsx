@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
@@ -42,7 +41,7 @@ const Reviews = () => {
 	];
 
 	return (
-		<div className="relative overflow-hidden my-4">
+		<div className="relative overflow-hidden">
 			{/* Scrolling Container */}
 			<div className="flex items-center gap-5 space-x-4 animate-scroll infinite-scroll">
 				{/* Duplicate the cards to create an infinite effect */}
