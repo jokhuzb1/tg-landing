@@ -8,7 +8,11 @@ const Head = () => {
 		<header
 			className="relative bg-cover bg-center head-section h-screen -mx-4 md:-mx-8 lg:-mx-24 text-start " // Adjust the negative margins
 		>
-			<img src={bgimg} alt="bg-img" className="absolute top-0 right-0 " />
+			<img
+				src={bgimg}
+				alt="bg-img"
+				className="absolute top-0 right-0 left-0 md:left-[50%] h-[100%] object-contain md:h-[50%] md:top-10 -z-10"
+			/>
 			<div className="flex flex-col h-[60%] justify-around">
 				<h1
 					className="font-bold text-4xl md:text-5xl lg:text-6xl "

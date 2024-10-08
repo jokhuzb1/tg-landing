@@ -42,7 +42,7 @@ const Reviews = () => {
 	];
 
 	return (
-		<div className="relative overflow-hidden">
+		<div className="relative overflow-hidden my-4">
 			{/* Scrolling Container */}
 			<div className="flex items-center gap-5 space-x-4 animate-scroll infinite-scroll">
 				{/* Duplicate the cards to create an infinite effect */}
