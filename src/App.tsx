@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Head from "@/sections/Head.jsx";
 import Main from "@/sections/Main";
 import "./App.css";
+import Footer from "./components/footer";
 
 function App() {
   const sectionRefs = {
@@ -24,6 +25,7 @@ function App() {
         <Head />
       </div>
       <Main sectionRefs={sectionRefs} />
+      <Footer scrollToSection={scrollToSection} />
     </div>
   );
 }

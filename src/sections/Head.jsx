@@ -1,19 +1,17 @@
-import bgimg from "@/assets/tg.png";
 import { Button } from "@/components/ui/button.tsx";
 import Reviews from "@/components/Reviews";
 import YoutubeAndTelegram from "./YoutubeAndTelegram";
 
 const Head = () => {
   return (
-    <header
-      className="relative bg-cover bg-center head-section h-screen -mx-4 md:-mx-8 lg:-mx-24 text-start " // Adjust the negative margins
-    >
-      <img
-        src={bgimg}
-        alt="bg-img"
-        className="absolute top-0 right-0 left-0 md:left-[50%] h-[100%] object-contain md:h-[50%] md:top-10 -z-10"
-      />
-      <div className="flex flex-col h-[60%] justify-around">
+    <header className="relative bg-cover  mt-[90px] bg-right text-start ">
+      <div
+        className="flex flex-col gap-2 mb-[46px] bg-[url('/src/assets/tg.png')] py-[20px] px-[10px] md:bg-[length:60%] bg-[length:100%]"
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right center",
+        }}
+      >
         <h1
           className="font-bold text-4xl md:text-5xl lg:text-6xl "
           style={{ fontSize: "2.5rem", lineHeight: "3.5rem" }}
@@ -21,12 +19,12 @@ const Head = () => {
           Добро пожаловать в TopMusicBot! 🎶
         </h1>
         <p
-          className="mt-4 text-lg md:text-xl lg:text-2xl max-w-5xl overflow-hidden"
+          className="my-4 text-lg md:text-xl lg:text-2xl max-w-5xl overflow-hidden"
           style={{ fontSize: "1.25rem", lineHeight: "2rem" }}
         >
-          <h3 className="text-2xl font-bolder">
+          <span className="text-2xl font-bolder">
             TopMusicBot — ваш идеальный помощник в мире музыки и кино.
-          </h3>
+          </span>
           <br /> С помощью нашего бота вы можете:
           <br /> Улучшить качество JPG изображений: Загружайте фото для
           улучшения.
@@ -46,7 +44,6 @@ const Head = () => {
       <Reviews />
     </header>
   );
-
 };
 
 export default Head;
