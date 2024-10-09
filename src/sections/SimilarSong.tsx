@@ -1,12 +1,38 @@
+import { motion } from "framer-motion";
 import rocket from "@/assets/rocket.png";
 import magnifier from "@/assets/magnifier.png";
 import pointer from "@/assets/pointer.png";
 import download from "@/assets/download.png";
 import phone from "@/assets/phone.png";
+
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
+const fadeInLeft = {
+  hidden: { opacity: 0, x: -50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
+const fadeInRight = {
+  hidden: { opacity: 0, x: 50 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
 const SimilarSong = () => {
   return (
     <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full">
-      <div className="flex justify-between items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px] ">
+      {/* Left Section (Rocket and Magnifier) */}
+      <motion.div
+        className="flex justify-between items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px]"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInLeft}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {/* Rocket */}
         <div className="flex flex-col justify-center items-center md:justify-end md:items-end gap-[6px]">
           <img
             src={rocket}
@@ -24,6 +50,7 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
+        {/* Magnifier */}
         <div className="flex flex-col justify-center items-center md:justify-end md:items-end gap-[6px] ">
           <img
             src={magnifier}
@@ -42,13 +69,27 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div>
+      {/* Phone Image */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInUp}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <img src={phone} alt="phone" />
-      </div>
+      </motion.div>
 
-      <div className="flex justify-between items-start flex-col max-h-[290px] min-h-[135px] h-full gap-[17px] ">
+      {/* Right Section (Pointer and Download) */}
+      <motion.div
+        className="flex justify-between items-start flex-col max-h-[290px] min-h-[135px] h-full gap-[17px]"
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeInRight}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {/* Pointer */}
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start gap-[6px] max-w-[358px]">
           <img
             src={pointer}
@@ -66,6 +107,7 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
+        {/* Download */}
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start gap-[6px] max-w-[358px]">
           <img
             src={download}
@@ -84,7 +126,7 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
