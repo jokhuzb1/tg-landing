@@ -7,7 +7,7 @@ const ReviewCard = ({ name, review }: { name: string; review: string }) => {
     name.charAt(0).toLocaleUpperCase() + name.slice(1).toLocaleLowerCase();
 
   return (
-    <Card className="min-w-[340px] max-h-[180px] min-h-[180px] bg-white shadow-lg rounded-lg m-2 mr-4">
+    <Card className="min-w-[340px]  bg-white shadow-lg rounded-lg m-2 ">
       {/* Header Section */}
       <CardHeader className="flex flex-row items-center">
         <Avatar className="w-12 h-12 rounded-full">
@@ -67,10 +67,8 @@ const Reviews = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden">
-      {/* Scrolling Container */}
-      <div className="flex items-center gap-5 space-x-4 animate-scroll infinite-scroll">
-        {/* Duplicate the cards to create an infinite effect */}
+    <div className="relative overflow-hidden bg-red-600 my-[79px]">
+      <div className="flex items-center gap-5  animate-scroll infinite-scroll">
         {reviews.map((r, index) => (
           <ReviewCard key={index} name={r.name} review={r.review} />
         ))}
