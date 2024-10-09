@@ -3,9 +3,9 @@ import logo from "@/assets/logo.png";
 const Navbar = ({ scrollToSection }) => {
   return (
     <nav className="fixed top-0 h-[90px] left-0 w-full shadow-md hover:opacity-100 bg-white z-50 ">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
+      <div className=" flex justify-between items-center gap-[10px] py-4 px-6 md:px-12 ">
         <div
-          className="text-xl font-bold cursor-pointer flex items-center"
+          className="text-xl font-bold cursor-pointer flex items-center gap-1 w-[200px] "
           onClick={() => scrollToSection("headSection")}
         >
           <img
@@ -13,11 +13,11 @@ const Navbar = ({ scrollToSection }) => {
             alt="logo"
             height={36}
             width={53}
-            className="rounded-full mx-2"
+            className="rounded-[50%]"
           />
           TopMusicBot
         </div>
-        <div className="space-x-4 hidden md:flex">
+        <div className="gap-[12px] hidden md:flex w-[calc(100% - 200px)] justify-end">
           <button onClick={() => scrollToSection("ai")}>ИИ</button>
           <button onClick={() => scrollToSection("improveQuality")}>
             Улучшение JPG

@@ -6,23 +6,17 @@ const Head = () => {
   return (
     <header className="relative bg-cover  mt-[90px] bg-right text-start ">
       <div
-        className="flex flex-col gap-2 mb-[46px] bg-[url('/src/assets/tg.png')] py-[20px] px-[10px] md:bg-[length:60%] bg-[length:100%]"
+        className="flex flex-col gap-2 mb-[46px] md:bg-[url('/src/assets/tg.png')] py-[60px] px-[10px] md:bg-[length:60%] bg-transparent"
         style={{
           backgroundRepeat: "no-repeat",
           backgroundPosition: "right center",
         }}
       >
-        <h1
-          className="font-bold text-4xl md:text-5xl lg:text-6xl "
-          style={{ fontSize: "2.5rem", lineHeight: "3.5rem" }}
-        >
+        <h1 className="font-bold text-[26px] md:text-3xl lg:text-4xl text-center md:text-start w-full">
           Добро пожаловать в TopMusicBot! 🎶
         </h1>
-        <p
-          className="my-4 text-lg md:text-xl lg:text-2xl max-w-5xl overflow-hidden"
-          style={{ fontSize: "1.25rem", lineHeight: "2rem" }}
-        >
-          <span className="text-2xl font-bolder">
+        <p className="my-4 text-[16px] md:text-[18px]   overflow-hidden text-center md:text-start">
+          <span className="text-1xl font-bolder">
             TopMusicBot — ваш идеальный помощник в мире музыки и кино.
           </span>
           <br /> С помощью нашего бота вы можете:
@@ -36,7 +30,10 @@ const Head = () => {
           <br /> Создавать плейлисты по настроению: Опишите настроение, и бот
           соберет подходящие треки.
         </p>
-        <Button size="sm" className="w-24 bg-red-600">
+        <Button
+          size="sm"
+          className=" py-[8px] px-[16px]  bg-red-600 mx-auto md:ml-0"
+        >
           Open Channel
         </Button>
       </div>

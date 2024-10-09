@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Navbar scrollToSection={scrollToSection} />
-      <div ref={sectionRefs.headSection} className="">
+      <div ref={sectionRefs.headSection}>
         <Head />
       </div>
       <Main sectionRefs={sectionRefs} />
