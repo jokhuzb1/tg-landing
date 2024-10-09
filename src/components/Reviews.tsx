@@ -67,7 +67,7 @@ const Reviews = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-red-600 my-[79px]">
+    <div className="relative overflow-hidden  my-[79px]">
       <div className="flex items-center gap-5  animate-scroll infinite-scroll">
         {reviews.map((r, index) => (
           <ReviewCard key={index} name={r.name} review={r.review} />
