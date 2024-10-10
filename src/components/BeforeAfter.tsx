@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import { motion } from "framer-motion";
 
 type State = {
   rangeValue: number;
@@ -22,6 +23,15 @@ function reducer(state: State, action: Action): State {
       return state;
   }
 }
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 },
+  },
+};
 
 type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 type PointerEvent = React.PointerEvent<HTMLDivElement>;
@@ -95,7 +105,7 @@ export function BeforeAfter({
   };
 
   return (
-    <div
+    <motion.div
       className={className}
       style={{
         position: `relative`,
@@ -106,8 +116,13 @@ export function BeforeAfter({
         margin: "auto",
         cursor: "e-resize",
         userSelect: "none",
+
         ...style,
       }}
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeInUp}
+      viewport={{ once: true, amount: 0.2 }}
       onPointerMove={pointerMove ? handlePointerMove : undefined}
       onPointerEnter={handlePointerEnter}
       onPointerLeave={handlePointerLeave}
@@ -191,6 +206,6 @@ export function BeforeAfter({
           </div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 }

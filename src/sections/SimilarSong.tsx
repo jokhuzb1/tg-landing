@@ -23,8 +23,7 @@ const fadeInRight = {
 
 const SimilarSong = () => {
   return (
-    <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full">
-      {/* Left Section (Rocket and Magnifier) */}
+    <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full overflow-x-hidden">
       <motion.div
         className="flex justify-between items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px]"
         initial="hidden"
@@ -32,7 +31,6 @@ const SimilarSong = () => {
         variants={fadeInLeft}
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Rocket */}
         <div className="flex flex-col justify-center items-center md:justify-end md:items-end gap-[6px]">
           <img
             src={rocket}
@@ -50,7 +48,6 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
-        {/* Magnifier */}
         <div className="flex flex-col justify-center items-center md:justify-end md:items-end gap-[6px] ">
           <img
             src={magnifier}
@@ -70,8 +67,6 @@ const SimilarSong = () => {
           </div>
         </div>
       </motion.div>
-
-      {/* Phone Image */}
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -81,7 +76,6 @@ const SimilarSong = () => {
         <img src={phone} alt="phone" />
       </motion.div>
 
-      {/* Right Section (Pointer and Download) */}
       <motion.div
         className="flex justify-between items-start flex-col max-h-[290px] min-h-[135px] h-full gap-[17px]"
         initial="hidden"
@@ -89,7 +83,6 @@ const SimilarSong = () => {
         variants={fadeInRight}
         viewport={{ once: true, amount: 0.2 }}
       >
-        {/* Pointer */}
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start gap-[6px] max-w-[358px]">
           <img
             src={pointer}
@@ -107,7 +100,6 @@ const SimilarSong = () => {
             </p>
           </div>
         </div>
-        {/* Download */}
         <div className="flex flex-col justify-center md:justify-start items-center md:items-start gap-[6px] max-w-[358px]">
           <img
             src={download}
