@@ -79,7 +79,7 @@ export const Navigation = ({ scrollToSection, isMounted, toggle }) => {
         !isMounted
           ? "opacity-0 pointer-events-none"
           : "opacity-100 pointer-events-auto"
-      } transition-opacity bg-gray-800 text-white overflow-auto`}
+      } transition-opacity bg-gray-800 text-white overflow-hidden`}
     >
       {itemIds.map((i, idx) => (
         <MenuItem
