@@ -5,6 +5,16 @@ import { AccordionSection } from "./Accordion";
 import SimilarSong from "./SimilarSong";
 import SearchMovie from "./SearchMovie";
 import ChooseGender from "./ChooseGender";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8 },
+  },
+};
 
 const TopMusicBotLanding = ({ sectionRefs }) => {
   return (
@@ -17,12 +27,18 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
           <h2 className="text-[24px] md:text-[36px] font-bolder ">
             Используйте возможности ИИ в нашем Telegram-боте!
           </h2>
-          <div className="w-full justify-between gap-3 flex items-center md:flex-row flex-col">
+          <motion.div
+            className="w-full justify-between gap-3 flex items-center md:flex-row flex-col"
+            initial="hidden"
+            whileInView="visible"
+            variants={fadeInUp}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <img src={ai} alt="AI image" className="md:w-[60%] w-full" />
             <div className="md:w-[40%] w-full flex justify-center items-center h-full ">
               <Slider />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div
