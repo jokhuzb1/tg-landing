@@ -1,105 +1,3 @@
-// import React from "react";
-// import logo from "@/assets/logo.png";
-// const Navbar = ({ scrollToSection }) => {
-//   return (
-//     <nav className="fixed top-0 h-[90px] left-0 w-full shadow-md hover:opacity-100 bg-white z-50 ">
-//       <div className=" flex justify-between items-center gap-[10px] py-4 px-6 md:px-12 ">
-//         <div
-//           className="text-xl font-bold cursor-pointer flex items-center gap-1 w-[200px] "
-//           onClick={() => scrollToSection("headSection")}
-//         >
-//           <img
-//             src={logo}
-//             alt="logo"
-//             height={36}
-//             width={53}
-//             className="rounded-[50%]"
-//           />
-//           TopMusicBot
-//         </div>
-//         <div className="gap-[12px] hidden md:flex w-[calc(100% - 200px)] justify-end">
-//           <button onClick={() => scrollToSection("ai")}>ИИ</button>
-//           <button onClick={() => scrollToSection("improveQuality")}>
-//             Улучшение JPG
-//           </button>
-//           <button onClick={() => scrollToSection("searchMovie")}>Фильмы</button>
-//           <button onClick={() => scrollToSection("searchSimilarSongs")}>
-//             Песни
-//           </button>
-//           <button onClick={() => scrollToSection("identifyGenre")}>
-//             Жанры
-//           </button>
-
-//           <button onClick={() => scrollToSection("faq")}>FAQ</button>
-//           <a className="block text-white py-2 px-4 bg-[#0F172A] rounded-[6px]">
-//             Telegram Bot
-//           </a>
-//         </div>
-//         {/* Mobile Menu */}
-//         <div className="md:hidden flex items-center">
-//           <button
-//             id="menu-btn"
-//             className="text-white focus:outline-none focus:ring"
-//           >
-//             <svg
-//               className="w-8 h-8"
-//               fill="none"
-//               stroke="currentColor"
-//               viewBox="0 0 24 24"
-//               xmlns="http://www.w3.org/2000/svg"
-//             >
-//               <path
-//                 strokeLinecap="round"
-//                 strokeLinejoin="round"
-//                 strokeWidth="2"
-//                 d="M4 6h16M4 12h16m-7 6h7"
-//               ></path>
-//             </svg>
-//           </button>
-//         </div>
-
-//       </div>
-//       {/* Mobile Dropdown */}
-//       <div className="md:hidden fixed right-0 bg-gray-800">
-//         <button
-//           onClick={() => scrollToSection("improveQuality")}
-//           className="block text-white py-2 px-4 hover:bg-gray-700"
-//         >
-//           Улучшение JPG
-//         </button>
-//         <button
-//           onClick={() => scrollToSection("searchMovie")}
-//           className="block text-white py-2 px-4 hover:bg-gray-700"
-//         >
-//           Фильмы
-//         </button>
-//         <button
-//           onClick={() => scrollToSection("searchSimilarSongs")}
-//           className="block text-white py-2 px-4 hover:bg-gray-700"
-//         >
-//           Песни
-//         </button>
-//         <button
-//           onClick={() => scrollToSection("identifyGenre")}
-//           className="block text-white py-2 px-4 hover:bg-gray-700"
-//         >
-//           Жанры
-//         </button>
-
-//         <button onClick={() => scrollToSection("faq")}>FAQ</button>
-//         <a
-//           href="/"
-//           className="block text-white py-2 px-4 bg-[#0F172A] rounded-[6px]"
-//         >
-//           Telegram Bot
-//         </a>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
 import { motion, useCycle } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import logo from "@/assets/logo.png";
@@ -255,8 +153,8 @@ const Navbar = ({ scrollToSection }) => {
   }, [isOpen]);
 
   return (
-    <nav className="fixed top-0 left-0 w-full h-[90px] bg-white shadow-md z-50">
-      <div className="flex justify-between items-center gap-4 py-4 px-6 md:px-12">
+    <nav className="fixed top-0 left-0 w-full h-[80px] bg-[rgba(255, 255, 255, 0)] backdrop-blur-[21px] backdrop-saturate-[138%]  z-50">
+      <div className="flex justify-between items-center gap-4 py-4 px-6 md:px-12 max-w-[1380px] mx-auto">
         {/* Logo */}
         <div
           className="text-xl font-bold flex items-center gap-2 cursor-pointer"

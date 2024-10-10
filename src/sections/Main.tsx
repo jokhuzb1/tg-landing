@@ -1,11 +1,13 @@
 import { BeforeAfter } from "@/components/BeforeAfter";
 import ai from "@/assets/ai.jpg";
-import Slider from "@/components/Slider";
+import { Slider } from "@/components/Slider";
 import { AccordionSection } from "./Accordion";
 import SimilarSong from "./SimilarSong";
 import SearchMovie from "./SearchMovie";
 import ChooseGender from "./ChooseGender";
 import { motion } from "framer-motion";
+import TelegramSection from "./TelegramSection";
+import YoutubeSection from "./YoutubeSection";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -19,6 +21,12 @@ const fadeInUp = {
 const TopMusicBotLanding = ({ sectionRefs }) => {
   return (
     <div className="w-full my-[79px]">
+      <div className="py-10 flex w-full  mb-[96px]">
+        <TelegramSection />
+      </div>
+      <div className="py-10  w-full flex my-[96px]">
+        <YoutubeSection />
+      </div>
       <div
         ref={sectionRefs.ai}
         className="flex items-center justify-center py-10 my-[96px]"
@@ -28,7 +36,7 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
             Используйте возможности ИИ в нашем Telegram-боте!
           </h2>
           <motion.div
-            className="w-full justify-between gap-3 flex items-center md:flex-row flex-col"
+            className="w-full justify-between md:gap-3 flex items-center md:flex-row flex-col"
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}

@@ -1,3 +1,8 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
+
 const text = [
   {
     t: "Улучшение фотографий",
@@ -17,21 +22,35 @@ const text = [
   },
 ];
 
-const Slider = () => {
+export const Slider = () => {
   return (
-    <div className="slider">
-      <div className="slides">
-        {text.map((i, idx) => (
-          <div className="slide " key={idx}>
-            <h3 className="font-[500] text-start text-[19px] mb-3">{i.t}</h3>
-            <p className="font-[400] leading-[24px] text-gray-500 text-start">
-              {i.b}
-            </p>
-          </div>
+    <div className="w-full  max-w-2xl mx-auto">
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1}
+        loop={true}
+        allowTouchMove={false}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        speed={2000}
+        modules={[Autoplay]}
+        className=" w-full"
+      >
+        {text.map((i, index) => (
+          <SwiperSlide key={index} className="w-full">
+            <div className="flex items-center justify-center flex-col ">
+              <h3 className="font-[500] md:text-start text-center text-[19px] mb-1 w-full ">
+                {i.t}
+              </h3>
+              <p className="font-[400] leading-[24px] text-gray-500 md:text-start text-center">
+                {i.b}
+              </p>
+            </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };
-
-export default Slider;
