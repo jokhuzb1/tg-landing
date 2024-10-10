@@ -32,7 +32,7 @@ const ReviewCard = ({ name, review }: { name: string; review: string }) => {
 
 export default function Reviews() {
   return (
-    <div className="w-full px-2 mt-[96px] mb-[66px] ">
+    <div className="w-full px-2 my-[96px]">
       <Swiper
         slidesPerView={4}
         spaceBetween={20}
@@ -43,6 +43,24 @@ export default function Reviews() {
         autoplay={{
           delay: 1000,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          "@1.50": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
         }}
         className="mySwiper"
       >
