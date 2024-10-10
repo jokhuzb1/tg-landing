@@ -32,7 +32,7 @@ const ReviewCard = ({ name, review }: { name: string; review: string }) => {
 
 export default function Reviews() {
   return (
-    <div className="w-full px-2 my-[96px]">
+    <div className="w-full px-2 mt-[96px] my-[46px]">
       <Swiper
         slidesPerView={4}
         spaceBetween={20}
