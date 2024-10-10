@@ -75,7 +75,7 @@ export const Navigation = ({ scrollToSection, isMounted, toggle }) => {
   return (
     <motion.ul
       variants={variants}
-      className={`fixed top-[calc(100vh - 80px)] right-0 w-full h-full ${
+      className={`fixed top-[80vh] right-0 w-full h-full ${
         !isMounted
           ? "opacity-0 pointer-events-none"
           : "opacity-100 pointer-events-auto"
