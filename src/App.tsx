@@ -21,10 +21,12 @@ function App() {
   return (
     <div>
       <Navbar scrollToSection={scrollToSection} />
-      <div ref={sectionRefs.headSection}>
-        <Head />
+      <div className="max-w-[1350px] mx-auto">
+        <div ref={sectionRefs.headSection}>
+          <Head />
+        </div>
+        <Main sectionRefs={sectionRefs} />
       </div>
-      <Main sectionRefs={sectionRefs} />
       <Footer scrollToSection={scrollToSection} />
     </div>
   );

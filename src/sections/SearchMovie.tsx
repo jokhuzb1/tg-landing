@@ -21,15 +21,15 @@ const fadeInRight = {
 
 const SearchMovie = () => {
   return (
-    <div className="bg-[#F6F6F6] w-full py-[17px] flex justify-between items-end md:items-center flex-col gap-[70px] md:flex-row overflow-x-hidden">
+    <div className="bg-[#F6F6F6] w-full py-[17px] flex justify-between items-end md:items-center flex-col gap-[30px] md:gap-[70px] md:flex-row overflow-x-hidden">
       <motion.div
-        className="flex flex-col items-center mx-auto justify-center gap-[30px] md:gap-[85px]"
+        className="flex flex-col items-center md:items-end mx-auto justify-center md:justify-end gap-[30px] md:gap-[85px]"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="justify-end items-start gap-[17px] flex-col max-w-[500px]">
+        <div className="justify-center md:justify-end items-center md:items-end w-full gap-[17px] flex-col max-w-[500px]">
           <h2 className="md:text-3xl text-[24px] lg:text-4xl font-[500] md:text-end text-center">
             Поиск фильмов по сценам или типу
           </h2>

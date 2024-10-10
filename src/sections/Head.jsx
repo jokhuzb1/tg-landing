@@ -1,84 +1,111 @@
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button.tsx";
 import Reviews from "@/components/Reviews";
-import YoutubeAndTelegram from "./YoutubeAndTelegram";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import lady from "/src/assets/kinchabi.jpg";
+import cinema from "/src/assets/3d-cinema-film-reel.jpg";
+import music from "/src/assets/music-notes.jpg";
+import playlist from "/src/assets/playlist.jpg";
+import header from "/src/assets/header.jpg";
+import gender from "/src/assets/gender-music.jpg";
 
-// Animation Variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+const images = [
+  {
+    img: lady,
+    words: "Улучшить качество JPG изображений: Загружайте фото для улучшения.",
   },
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3, // Staggering the animation of child elements
-    },
+  {
+    img: cinema,
+    words:
+      "Искать фильмы по сценам или типу: Описание сцены — и бот найдет фильм!",
   },
-};
+  {
+    img: music,
+    words:
+      "Находить похожие песни: Укажите название, и бот предложит похожие треки.",
+  },
+  {
+    img: gender,
+    words: "Определять жанр композиции: Просто отправьте название песни.",
+  },
+  {
+    img: playlist,
+    words:
+      "Создавать плейлисты по настроению: Опишите настроение, и бот соберет подходящие треки.",
+  },
+];
 
 const Head = () => {
   return (
-    <header className="relative bg-cover mt-[90px] bg-right text-start">
-      <motion.div
-        className="flex flex-col gap-2 mb-[46px] md:bg-[url('/src/assets/tg.png')] py-[60px] px-[10px] md:bg-[length:60%] bg-transparent"
+    <Swiper
+      spaceBetween={0}
+      slidesPerView={1}
+      loop={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay]}
+    >
+      <SwiperSlide
         style={{
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "right center",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundImage: `url('${header}')`,
         }}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={staggerContainer}
+        className="w-full flex justify-center items-center h-[600px] mb-[46px] "
       >
-        {/* Heading with Fade In Up Animation */}
-        <motion.h1
-          className="font-bold text-[26px] md:text-3xl lg:text-4xl text-center md:text-start w-full"
-          variants={fadeInUp}
+        <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] flex justify-center items-center flex-col backdrop-saturate-[138%] w-max rounded-md p-2">
+          <h1 className="font-bold text-[26px] md:text-3xl lg:text-4xl text-center w-full">
+            Добро пожаловать в TopMusicBot! 🎶
+          </h1>
+
+          <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center">
+            TopMusicBot — ваш идеальный помощник в мире музыки и кино. С помощью
+            нашего бота вы можете:
+          </p>
+
+          <div className="w-full flex justify-center items-center">
+            <Button size="sm" className="py-[8px] px-[16px] bg-red-600 mx-auto">
+              Open Channel
+            </Button>
+          </div>
+        </div>
+      </SwiperSlide>
+
+      {images.map((i, idx) => (
+        <SwiperSlide
+          key={idx}
+          style={{
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundImage: `url(${i.img})`,
+          }}
+          className="w-full flex justify-center items-center h-[600px] mb-[46px] "
         >
-          Добро пожаловать в TopMusicBot! 🎶
-        </motion.h1>
+          <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] backdrop-saturate-[138%] flex justify-center items-center flex-col w-max rounded-md p-2">
+            <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center">
+              {i.words}
+            </p>
 
-        {/* Paragraph with Fade In Up Animation */}
-        <motion.p
-          className="my-4 text-[16px] md:text-[18px] overflow-hidden text-center md:text-start"
-          variants={fadeInUp}
-        >
-          <span className="text-1xl font-bolder">
-            TopMusicBot — ваш идеальный помощник в мире музыки и кино.
-          </span>
-          <br /> С помощью нашего бота вы можете:
-          <br /> Улучшить качество JPG изображений: Загружайте фото для
-          улучшения.
-          <br /> Искать фильмы по сценам или типу: Описание сцены — и бот найдет
-          фильм!
-          <br /> Находить похожие песни: Укажите название, и бот предложит
-          похожие треки. <br />
-          Определять жанр композиции: Просто отправьте название песни.
-          <br /> Создавать плейлисты по настроению: Опишите настроение, и бот
-          соберет подходящие треки.
-        </motion.p>
+            <div className="w-full flex justify-center items-center">
+              <Button
+                size="sm"
+                className="py-[8px] px-[16px] bg-red-600 mx-auto"
+              >
+                Open Channel
+              </Button>
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
 
-        {/* Button with Fade In Up Animation */}
-        <motion.div variants={fadeInUp} className="w-full flex justify-center">
-          <Button
-            size="sm"
-            className="py-[8px] px-[16px] bg-red-600 mx-auto md:ml-0"
-          >
-            Open Channel
-          </Button>
-        </motion.div>
-      </motion.div>
-
-      {/* Other Components */}
-      <YoutubeAndTelegram />
       <Reviews />
-    </header>
+    </Swiper>
   );
 };
 

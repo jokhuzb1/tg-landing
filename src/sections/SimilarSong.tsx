@@ -23,7 +23,7 @@ const fadeInRight = {
 
 const SimilarSong = () => {
   return (
-    <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full overflow-x-hidden">
+    <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full overflow-hidden">
       <motion.div
         className="flex justify-between items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px]"
         initial="hidden"
