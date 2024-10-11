@@ -4,12 +4,12 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
-import lady from "/src/assets/kinchabi.jpg";
+import lady from "/src/assets/kinchabi.png";
 import cinema from "/src/assets/3d-cinema-film-reel.jpg";
-import music from "/src/assets/music-notes.jpg";
-import playlist from "/src/assets/playlist.jpg";
+import music from "/src/assets/music-notes.png";
+import playlist from "/src/assets/playlist.png";
 import header from "/src/assets/header.jpg";
-import gender from "/src/assets/gender-music.jpg";
+import gender from "/src/assets/gender-music.png";
 
 const images = [
   {
@@ -38,6 +38,9 @@ const images = [
 ];
 
 const Head = () => {
+  const handleClick = () => {
+    location.href = "https://t.me/Youtu2018bot";
+  };
   return (
     <Swiper
       spaceBetween={0}
@@ -69,7 +72,11 @@ const Head = () => {
           </p>
 
           <div className="w-full flex justify-center items-center">
-            <Button size="sm" className="py-[8px] px-[16px] bg-red-600 mx-auto">
+            <Button
+              onClick={handleClick}
+              size="sm"
+              className="py-[8px] px-[16px] bg-red-600 mx-auto"
+            >
               Open Channel
             </Button>
           </div>
@@ -95,6 +102,7 @@ const Head = () => {
             <div className="w-full flex justify-center items-center">
               <Button
                 size="sm"
+                onClick={handleClick}
                 className="py-[8px] px-[16px] bg-red-600 mx-auto"
               >
                 Open Channel

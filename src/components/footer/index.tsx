@@ -4,8 +4,11 @@ import youtube from "@/assets/youtube-small.png";
 
 const Footer = ({ scrollToSection }) => {
   return (
-    <div className="bg-[#464d53]">
+    <footer className="bg-[#464d53]">
       <div className="min-h-[270px] max-w-[1350px] mx-auto py-[40px] px-[10px] w-full flex justify-center items-center gap-[27px] flex-col ">
+        <h2 className="text-center text-white text-4xl font-semibold sr-only">
+          Оставайтесь на связи
+        </h2>
         <div className="flex justify-center items-center gap-[56px] flex-wrap *:text-[#F6F6F6]">
           <button onClick={() => scrollToSection("ai")}>ИИ</button>
           <button onClick={() => scrollToSection("improveQuality")}>
@@ -22,13 +25,13 @@ const Footer = ({ scrollToSection }) => {
           <button onClick={() => scrollToSection("faq")}>FAQ</button>
         </div>
         <div className="flex justify-center items-center gap-[27.54px] flex-wrap">
-          <a href="/">
+          <a href="https://t.me/Youtu2018bot">
             <img src={facebook} alt="facebook" />
           </a>
-          <a href="/">
+          <a href="https://t.me/Youtu2018bot">
             <img src={twitter} alt="twitter" />
           </a>
-          <a href="/">
+          <a href="https://t.me/Youtu2018bot">
             <img src={youtube} alt="youtube" />
           </a>
         </div>
@@ -38,7 +41,7 @@ const Footer = ({ scrollToSection }) => {
           </span>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

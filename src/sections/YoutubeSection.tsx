@@ -31,7 +31,7 @@ const YoutubeSection = () => {
           </p>
         </div>
         <a
-          href="/"
+          href="https://t.me/Youtu2018bot"
           className="block text-white py-2 px-4 bg-[#0F172A] rounded-[6px]"
         >
           Продолжить

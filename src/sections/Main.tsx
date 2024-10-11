@@ -21,13 +21,13 @@ const fadeInUp = {
 const TopMusicBotLanding = ({ sectionRefs }) => {
   return (
     <div className="w-full my-[79px]">
-      <div className="py-10 flex w-full  mb-[96px]">
+      <section className="py-10 flex w-full  mb-[96px]">
         <TelegramSection />
-      </div>
-      <div className="py-10  w-full flex my-[96px]">
+      </section>
+      <section className="py-10  w-full flex my-[96px]">
         <YoutubeSection />
-      </div>
-      <div
+      </section>
+      <section
         ref={sectionRefs.ai}
         className="flex items-center justify-center py-10 my-[96px]"
       >
@@ -48,8 +48,8 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
             </div>
           </motion.div>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         ref={sectionRefs.improveQuality}
         className="flex items-center justify-center py-10 my-[96px]"
       >
@@ -67,14 +67,14 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
             изображений прямо сейчас!
           </p>
         </div>
-      </div>
-      <div
+      </section>
+      <section
         ref={sectionRefs.searchMovie}
         className="py-10 flex w-full my-[96px]"
       >
         <SearchMovie />
-      </div>
-      <div
+      </section>
+      <section
         ref={sectionRefs.searchSimilarSongs}
         className="flex items-center justify-center flex-col py-10  my-[96px] "
       >
@@ -88,21 +88,21 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
           </p>
         </div>
         <SimilarSong />
-      </div>
-      <div
+      </section>
+      <section
         ref={sectionRefs.identifyGenre}
         className="py-10  w-full flex my-[96px]"
       >
         <ChooseGender />
-      </div>
+      </section>
 
-      <div
+      <section
         ref={sectionRefs.faq}
         className="max-w-[500px] mx-auto w-full my-[96px] px-4"
       >
         <h2 className="text-[24px] md:text-[36px] font-bolder">FAQ</h2>
         <AccordionSection />
-      </div>
+      </section>
     </div>
   );
 };
