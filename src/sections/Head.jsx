@@ -59,7 +59,7 @@ const Head = () => {
           backgroundSize: "cover",
           backgroundImage: `url('${header}')`,
         }}
-        className="w-full flex justify-center items-center h-[600px] mb-[46px] "
+        className="w-full flex justify-center items-center h-screen px-2"
       >
         <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] flex justify-center items-center flex-col backdrop-saturate-[138%] w-max rounded-md p-2">
           <h1 className="font-bold text-[26px] md:text-3xl lg:text-4xl text-center w-full">
@@ -92,7 +92,7 @@ const Head = () => {
             backgroundSize: "cover",
             backgroundImage: `url(${i.img})`,
           }}
-          className="w-full flex justify-center items-center h-[600px] mb-[46px] "
+          className="w-full flex justify-center items-center h-screen px-2 "
         >
           <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] backdrop-saturate-[138%] flex justify-center items-center flex-col w-max rounded-md p-2">
             <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center">
