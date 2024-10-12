@@ -4,12 +4,12 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
-import lady from "/src/assets/kinchabi.jpg";
+import lady from "/src/assets/kinchabi.png";
 import cinema from "/src/assets/3d-cinema-film-reel.jpg";
-import music from "/src/assets/music-notes.jpg";
-import playlist from "/src/assets/playlist.jpg";
+import music from "/src/assets/music-notes.png";
+import playlist from "/src/assets/playlist.png";
 import header from "/src/assets/header.jpg";
-import gender from "/src/assets/gender-music.jpg";
+import gender from "/src/assets/gender-music.png";
 
 const images = [
   {
@@ -38,6 +38,9 @@ const images = [
 ];
 
 const Head = () => {
+  const handleClick = () => {
+    location.href = "https://t.me/Youtu2018bot";
+  };
   return (
     <Swiper
       spaceBetween={0}
@@ -56,7 +59,7 @@ const Head = () => {
           backgroundSize: "cover",
           backgroundImage: `url('${header}')`,
         }}
-        className="w-full flex justify-center items-center h-[600px] mb-[46px] "
+        className="w-full flex justify-center items-center h-screen px-2"
       >
         <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] flex justify-center items-center flex-col backdrop-saturate-[138%] w-max rounded-md p-2">
           <h1 className="font-bold text-[26px] md:text-3xl lg:text-4xl text-center w-full">
@@ -69,7 +72,11 @@ const Head = () => {
           </p>
 
           <div className="w-full flex justify-center items-center">
-            <Button size="sm" className="py-[8px] px-[16px] bg-red-600 mx-auto">
+            <Button
+              onClick={handleClick}
+              size="sm"
+              className="py-[8px] px-[16px] bg-red-600 mx-auto"
+            >
               Open Channel
             </Button>
           </div>
@@ -85,7 +92,7 @@ const Head = () => {
             backgroundSize: "cover",
             backgroundImage: `url(${i.img})`,
           }}
-          className="w-full flex justify-center items-center h-[600px] mb-[46px] "
+          className="w-full flex justify-center items-center h-screen px-2 "
         >
           <div className="bg-[rgba(255, 255, 255, 0)] py-[8px] px-[16px] backdrop-blur-[21px] backdrop-saturate-[138%] flex justify-center items-center flex-col w-max rounded-md p-2">
             <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center">
@@ -95,6 +102,7 @@ const Head = () => {
             <div className="w-full flex justify-center items-center">
               <Button
                 size="sm"
+                onClick={handleClick}
                 className="py-[8px] px-[16px] bg-red-600 mx-auto"
               >
                 Open Channel

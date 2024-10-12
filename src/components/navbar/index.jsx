@@ -75,11 +75,11 @@ export const Navigation = ({ scrollToSection, isMounted, toggle }) => {
   return (
     <motion.ul
       variants={variants}
-      className={`fixed top-[80px] right-0 w-full h-[calc(100vh - 80px)] ${
+      className={`fixed top-[80px] right-0 w-full h-[100vh] ${
         !isMounted
           ? "opacity-0 pointer-events-none"
           : "opacity-100 pointer-events-auto"
-      } transition-opacity bg-gray-800 text-white overflow-hidden`}
+      } transition-opacity bg-white  overflow-hidden`}
     >
       {itemIds.map((i, idx) => (
         <MenuItem
