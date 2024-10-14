@@ -6,8 +6,8 @@ import SimilarSong from "./SimilarSong";
 import SearchMovie from "./SearchMovie";
 import ChooseGender from "./ChooseGender";
 import { motion } from "framer-motion";
-import TelegramSection from "./TelegramSection";
 import YoutubeSection from "./YoutubeSection";
+import CarauselSection from "./CarauselSection";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -21,12 +21,12 @@ const fadeInUp = {
 const TopMusicBotLanding = ({ sectionRefs }) => {
   return (
     <div className="w-full my-[79px]">
-      <section className="py-10 flex w-full  mb-[96px]">
-        <TelegramSection />
-      </section>
       <section className="py-10  w-full flex my-[96px]">
         <YoutubeSection />
       </section>
+      <div ref={sectionRefs.headSection}>
+        <CarauselSection />
+      </div>
       <section
         ref={sectionRefs.ai}
         className="flex items-center justify-center py-10 my-[96px]"

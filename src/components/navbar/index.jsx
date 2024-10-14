@@ -164,7 +164,7 @@ const Navbar = ({ scrollToSection }) => {
             src={logo}
             alt="logo"
             height={36}
-            width={53}
+            width={36}
             className="rounded-full"
           />
           TopMusicBot
