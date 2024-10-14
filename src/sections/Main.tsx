@@ -8,6 +8,7 @@ import ChooseGender from "./ChooseGender";
 import { motion } from "framer-motion";
 import YoutubeSection from "./YoutubeSection";
 import CarauselSection from "./CarauselSection";
+import Reviews from "@/components/Reviews";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -21,6 +22,10 @@ const fadeInUp = {
 const TopMusicBotLanding = ({ sectionRefs }) => {
   return (
     <div className="w-full my-[79px]">
+      <section className="w-full">
+        <h2 className="text-[24px] md:text-[36px] font-bolder">Отзывы</h2>
+        <Reviews />
+      </section>
       <section className="py-10  w-full flex my-[96px]">
         <YoutubeSection />
       </section>
