@@ -1,9 +1,10 @@
 import { useRef } from "react";
 import Navbar from "@/components/navbar";
-import Head from "@/sections/Head.jsx";
+// import Head from "@/sections/Head.jsx";
 import Main from "@/sections/Main";
 import "./App.css";
 import Footer from "./components/footer";
+import TelegramHeader from "./sections/TelegramHeader";
 
 function App() {
   const sectionRefs = {
@@ -22,9 +23,8 @@ function App() {
     <div>
       <Navbar scrollToSection={scrollToSection} />
       <div className="max-w-[1350px] mx-auto">
-        <div ref={sectionRefs.headSection}>
-          <Head />
-        </div>
+        <TelegramHeader />
+
         <Main sectionRefs={sectionRefs} />
       </div>
       <Footer scrollToSection={scrollToSection} />
