@@ -86,7 +86,11 @@ const CarauselSection = () => {
   };
 
   if (!imagesLoaded) {
-    return <div>Loading...</div>; // Loader while images are loading
+    return (
+      <div className="flex justify-center items-center h-full w-full">
+        Loading...
+      </div>
+    );
   }
 
   return (
@@ -99,6 +103,7 @@ const CarauselSection = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
+      className="h-screen"
     >
       {images.map((i, idx) => (
         <SwiperSlide
@@ -109,37 +114,35 @@ const CarauselSection = () => {
             backgroundSize: "cover",
             backgroundImage: `url(${isMobile ? i.img.mobile : i.img.desktop})`,
           }}
-          className="w-full flex justify-center items-center h-screen px-2 text-white tracking-wider font-medium"
+          className=" w-full  h-full px-2"
         >
-          <div
-            className={`py-[8px] px-[16px] flex justify-center items-center flex-col w-max rounded-md p-2 text-white ${
-              isMobile ? "" : "backdrop-blur-[21px] backdrop-saturate-[138%]"
-            }`}
-          >
-            {i.isHeader ? (
-              <>
-                <h1 className="font-bold text-[26px] text-white md:text-3xl lg:text-4xl text-center w-full">
-                  {i.words}
-                </h1>
+          <div className="flex justify-center items-center w-full h-full">
+            <div className="bg-[rgba(255, 255, 255, 0)] flex justify-center items-center flex-col py-[8px] px-[16px] backdrop-blur-[21px] max-w-[500px]  backdrop-saturate-[138%]  rounded-md p-2 ">
+              {i.isHeader ? (
+                <>
+                  <h1 className="font-bold text-[26px] text-white md:text-3xl lg:text-4xl text-center w-full">
+                    {i.words}
+                  </h1>
+                  <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center text-white">
+                    TopMusicBot — ваш идеальный помощник в мире музыки и кино. С
+                    помощью нашего бота вы можете:
+                  </p>
+                </>
+              ) : (
                 <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center text-white">
-                  TopMusicBot — ваш идеальный помощник в мире музыки и кино. С
-                  помощью нашего бота вы можете:
+                  {i.words}
                 </p>
-              </>
-            ) : (
-              <p className="my-4 text-[1.2rem] max-w-[400px] md:text-[18px] overflow-hidden text-center">
-                {i.words}
-              </p>
-            )}
+              )}
 
-            <div className="w-full flex justify-center items-center">
-              <Button
-                size="sm"
-                onClick={handleClick}
-                className="py-[8px] px-[16px] bg-red-600 mx-auto"
-              >
-                Open Channel
-              </Button>
+              <div className="w-full flex justify-center items-center">
+                <Button
+                  size="sm"
+                  onClick={handleClick}
+                  className="py-[8px] px-[16px] bg-red-600 mx-auto"
+                >
+                  Open Channel
+                </Button>
+              </div>
             </div>
           </div>
         </SwiperSlide>

@@ -1,12 +1,11 @@
-import { useRef } from "react";
+import { useRef, memo } from "react";
 import Navbar from "@/components/navbar";
-// import Head from "@/sections/Head.jsx";
 import Main from "@/sections/Main";
 import "./App.css";
 import Footer from "./components/footer";
 import TelegramHeader from "./sections/TelegramHeader";
 
-function App() {
+const App = () => {
   const sectionRefs = {
     ai: useRef(null),
     headSection: useRef(null),
@@ -30,6 +29,6 @@ function App() {
       <Footer scrollToSection={scrollToSection} />
     </div>
   );
-}
+};
 
-export default App;
+export default memo(App);
