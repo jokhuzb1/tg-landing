@@ -25,7 +25,7 @@ const SimilarSong = () => {
   return (
     <div className="flex justify-between items-center flex-col md:flex-row gap-4 w-full overflow-hidden">
       <motion.div
-        className="flex justify-between items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px]"
+        className="flex justify-between px-3 items-end min-h-[135px] max-h-[290px] h-full flex-col gap-[17px]"
         initial="hidden"
         whileInView="visible"
         variants={fadeInLeft}
@@ -77,7 +77,7 @@ const SimilarSong = () => {
       </motion.div>
 
       <motion.div
-        className="flex justify-between items-start flex-col max-h-[290px] min-h-[135px] h-full gap-[17px]"
+        className="flex justify-between px-3 items-start flex-col max-h-[290px] min-h-[135px] h-full gap-[17px]"
         initial="hidden"
         whileInView="visible"
         variants={fadeInRight}

@@ -19,7 +19,7 @@ const TelegramHeader = ({ sectionRefs }) => {
       }}
     >
       <motion.div
-        className="flex flex-col w-full items-center justify-center md:justify-start md:items-start text-center md:text-left h-full  max-w-[550px] gap-8"
+        className="flex flex-col w-full px-3 items-center justify-center md:justify-start md:items-start text-center md:text-left h-full  max-w-[550px] gap-8"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}

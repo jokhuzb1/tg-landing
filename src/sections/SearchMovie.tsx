@@ -29,7 +29,7 @@ const SearchMovie = () => {
         variants={fadeInUp}
         viewport={{ once: true, amount: 0.2 }}
       >
-        <div className="justify-center md:justify-end items-center md:items-end w-full gap-[17px] flex-col max-w-[500px]">
+        <div className="justify-center px-3 md:justify-end items-center md:items-end w-full gap-[17px] flex-col max-w-[500px]">
           <h2 className="md:text-3xl text-[24px] lg:text-4xl font-[500] md:text-end text-center">
             Поиск фильмов по сценам или типу
           </h2>

@@ -14,7 +14,7 @@ const YoutubeSection = () => {
         <img src={desktopAndPhoneLeft} alt="desktop and phone image" />
       </div>
       <motion.div
-        className="flex flex-col md:items-start items-center mx-auto md:justify-start justify-center gap-[30px] md:gap-[85px]"
+        className="flex flex-col px-3 md:items-start items-center mx-auto md:justify-start justify-center gap-[30px] md:gap-[85px]"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

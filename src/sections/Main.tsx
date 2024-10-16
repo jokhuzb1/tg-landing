@@ -36,7 +36,7 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
         ref={sectionRefs.ai}
         className="flex items-center justify-center py-10 my-[96px] bg-[#F6F6F6]"
       >
-        <div className=" p-5 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
+        <div className=" px-3 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
           <h2 className="text-[24px] md:text-[36px] font-bolder ">
             Используйте возможности ИИ в нашем Telegram-боте!
           </h2>
