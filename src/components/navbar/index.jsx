@@ -26,6 +26,7 @@ const sidebarVariants = {
 
 // Menu Items Data
 const itemIds = [
+  { name: "Функции", section: "features" },
   { name: "ИИ", section: "ai" },
   { name: "Улучшение JPG", section: "improveQuality" },
   { name: "Фильмы", section: "searchMovie" },
@@ -154,8 +155,7 @@ const Navbar = ({ scrollToSection }) => {
 
   return (
     <nav className="fixed top-0 left-0 w-full h-[80px] bg-[rgba(255, 255, 255, 0)] backdrop-blur-[21px] backdrop-saturate-[138%]  z-50">
-      <div className="flex justify-between items-center gap-4 py-4 px-6 md:px-12 max-w-[1380px] mx-auto">
-        {/* Logo */}
+      <div className="flex justify-between items-center gap-4 py-4 px-3 lg:px-12 max-w-[1380px] mx-auto">
         <div
           className="text-xl font-bold flex items-center gap-2 cursor-pointer"
           onClick={() => scrollToSection("headSection")}
@@ -171,7 +171,7 @@ const Navbar = ({ scrollToSection }) => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-6 w-full justify-end">
+        <div className="hidden md:flex gap-2  lg:gap-6 w-full justify-end">
           {itemIds.map((item) => (
             <button
               key={item.section}

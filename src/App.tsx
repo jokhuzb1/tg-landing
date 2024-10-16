@@ -7,6 +7,7 @@ import TelegramHeader from "./sections/TelegramHeader";
 
 const App = () => {
   const sectionRefs = {
+    features: useRef(null),
     ai: useRef(null),
     headSection: useRef(null),
     improveQuality: useRef(null),
@@ -22,8 +23,7 @@ const App = () => {
     <div>
       <Navbar scrollToSection={scrollToSection} />
       <div className="max-w-[1350px] mx-auto">
-        <TelegramHeader />
-
+        <TelegramHeader sectionRefs={sectionRefs.headSection} />
         <Main sectionRefs={sectionRefs} />
       </div>
       <Footer scrollToSection={scrollToSection} />

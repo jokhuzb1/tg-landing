@@ -10,6 +10,7 @@ const Footer = ({ scrollToSection }) => {
           Оставайтесь на связи
         </h2>
         <div className="flex justify-center items-center gap-[56px] flex-wrap *:text-[#F6F6F6]">
+          <button onClick={() => scrollToSection("features")}>Функции</button>
           <button onClick={() => scrollToSection("ai")}>ИИ</button>
           <button onClick={() => scrollToSection("improveQuality")}>
             Улучшение JPG

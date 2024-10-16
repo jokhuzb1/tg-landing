@@ -9,10 +9,11 @@ const fadeInUp = {
   },
 };
 
-const TelegramHeader = () => {
+const TelegramHeader = ({ sectionRefs }) => {
   return (
     <header
       className="w-full min-h-[500px] md:bg-[url('/src/assets/header-tg.png')] bg-no-repeat bg-right  max-h-[500px] md:px-[100px] flex md:justify-start justify-center items-center py-10 mt-[80px]  overflow-hidden"
+      ref={sectionRefs}
       style={{
         backgroundSize: "800px",
       }}

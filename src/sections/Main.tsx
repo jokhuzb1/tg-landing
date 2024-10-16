@@ -29,14 +29,14 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
       <section className="py-10  w-full flex my-[96px]">
         <YoutubeSection />
       </section>
-      <div ref={sectionRefs.headSection}>
+      <div ref={sectionRefs.features}>
         <CarauselSection />
       </div>
       <section
         ref={sectionRefs.ai}
-        className="flex items-center justify-center py-10 my-[96px]"
+        className="flex items-center justify-center py-10 my-[96px] bg-[#F6F6F6]"
       >
-        <div className="p-5 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
+        <div className=" p-5 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
           <h2 className="text-[24px] md:text-[36px] font-bolder ">
             Используйте возможности ИИ в нашем Telegram-боте!
           </h2>
