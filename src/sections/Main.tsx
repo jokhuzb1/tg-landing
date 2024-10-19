@@ -37,7 +37,7 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
         className="flex items-center justify-center py-10 my-[96px] bg-[#F6F6F6]"
       >
         <div className=" px-3 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
-          <h2 className="text-[24px] md:text-[36px] font-bolder ">
+          <h2 className="text-[24px] md:text-[36px] font-bolder">
             Используйте возможности ИИ в нашем Telegram-боте!
           </h2>
           <motion.div
@@ -63,8 +63,8 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
             Улучшение качества изображений JPG
           </h2>
           <BeforeAfter
-            beforeImage="https://picsum.photos/id/646/1920/1080?grayscale"
-            afterImage="https://picsum.photos/id/646/1920/1080"
+            beforeImage="/src/assets/beauty-before.jpg"
+            afterImage="/src/assets/beauty-after.jpg"
           />
           <p className="mt-4 text-lg lg:text-xl">
             Загрузите своё фото, и TopMusicBot сделает его более четким и
@@ -85,11 +85,10 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
       >
         <div className="p-8 text-center max-w-4xl">
           <h2 className="text-[24px] md:text-[36px] font-bolder">
-            Поиск похожих песен
+            Как работает бот TopMusicBot
           </h2>
           <p className="mt-4 text-lg lg:text-xl">
-            Найдите похожие композиции на вашу любимую песню с помощью
-            TopMusicBot! Откройте для себя новые треки.
+            Весь процесс занимает всего четыре шага:
           </p>
         </div>
         <SimilarSong />
