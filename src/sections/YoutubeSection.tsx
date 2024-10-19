@@ -1,7 +1,11 @@
 import desktopAndPhoneLeft from "@/assets/youtube-for-section.png";
+import SeeMore from "@/components/SeeMore";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const YoutubeSection = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <motion.div
       className="bg-[#F6F6F6] w-full py-[17px]  md:py-0 flex justify-between items-start md:items-center flex-col-reverse gap-[70px] md:flex-row overflow-x-hidden"
@@ -22,31 +26,60 @@ const YoutubeSection = () => {
       >
         <div className="flex justify-start items-start gap-[12px] flex-col max-w-[500px]">
           <h2 className="text-[24px] md:text-3xl  font-[500] md:text-start text-center w-full">
-            Почему TopMusicBot – ваш выбор
+            Смотреть видео
           </h2>
           <p className=" text-[16px]  md:text-start text-center">
-            У скачивания видео через TopMusicBot есть несколько плюсов:
+            В России не работает YouTube, а нормальных альтернатив все еще нет.
+            Большинство пользователей либо мирятся с низкой скорость, при
+            просмотре через VPN, либо отказываются от любимого досуга.
+            <br />
+            TopMusicBot – решит проблему с доступом к YouTube. Смотрите новые
+            видео любимых блогеров в Telegrame без тормозов и в хорошем
+            качестве. Ничего не нужно скачивать или настраивать – просто
+            добавьте каналы и получайте новинки.{" "}
+            <button
+              onClick={() => setOpen(!open)}
+              className="underline text-[16px]  md:text-start text-center "
+            >
+              {open ? "Узнать Меньше" : "Узнать Больше"}
+            </button>
           </p>
-          <div className="ml-2 flex justify-start items-start gap-[2px] flex-col max-w-[500px]">
-            <p className=" text-[14px]  md:text-start text-center">
-              ⦁ Любое разрешение видео. Большинство популярных сервисов для
-              скачивания роликов предлагают ограниченный выбор разрешений – не
-              больше 720Р или 1080Р. С TopMusicBot вы можете скачать видео даже
-              в 4К или 8К.
+          <SeeMore
+            open={open}
+            className="w-full max-w-[500px] *:text-center *:md:text-start"
+          >
+            <h3 className="text-lg font-semibold mt-4  text-start">
+              Плюсы TopMusicBot
+            </h3>
+            <p className="mt-1 text-start">
+              У TopMusicBot есть несколько плюсов, в сравнении с VPN:
             </p>
-            <p className=" text-[14px]  md:text-start text-center">
-              ⦁ Нет ограничений на скорость. Время скачивания зависит только от
-              скорости вашего интернета. Нет очереди и лимита по трафику.
+            <ul className="list-disc ml-4">
+              <li className="text-start">
+                Не нужно мириться с низкой скоростью интернета. Вы можете
+                параллельно сидеть в социальных сетях или играть в онлайн-игры.
+              </li>
+              <li className="text-start">
+                Высокое качество. Большинство обходов замедления Youtube
+                позволяют запускать видео в 720р. С TopMusicBot вы можете
+                смотреть ролики в FullHD и выше.
+              </li>
+              <li className="text-start">
+                Вы получаете новинки. Сегодня большинство пользователей не
+                получают уведомления. TopMusicBot пришлет вам новинки от любимых
+                блогеров, поэтому вы всегда будете в курсе.
+              </li>
+              <li className="text-start">
+                Ничего не нужно скачивать и настраивать. Отправьте боту ссылку и
+                смотрите видео прямо в мессенджере.
+              </li>
+            </ul>
+
+            <p className="mt-1 text-start">
+              По подписке вы можете смотреть видео на Youtube без ограничений.
+              Забудьте про тормоза и низкую скорость соединения!
             </p>
-            <p className=" text-[14px]  md:text-start text-center">
-              ⦁ Всегда под рукой. Не нужно искать сервисы с Гугле или Яндексе.
-              Просто скопируйте ссылку в бот, и загрузка начнется автоматически.
-            </p>
-          </div>
-          <p className=" text-[16px]  md:text-start text-center">
-            Главный плюс TopMusicBot – ничего не нужно скачивать! Загрузка видео
-            происходит в два клика.
-          </p>
+          </SeeMore>
         </div>
         <a
           href="https://t.me/Youtu2018bot"

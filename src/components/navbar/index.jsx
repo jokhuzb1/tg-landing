@@ -26,11 +26,11 @@ const sidebarVariants = {
 
 // Menu Items Data
 const itemIds = [
-  { name: "Функции", section: "features" },
-  { name: "ИИ", section: "ai" },
+  { name: "Видео", section: "video" },
+  { name: "Плейлисты", section: "features" },
+  { name: "Песни", section: "searchSimilarSongs" },
   { name: "Улучшение JPG", section: "improveQuality" },
   { name: "Фильмы", section: "searchMovie" },
-  { name: "Песни", section: "searchSimilarSongs" },
   { name: "Жанры", section: "identifyGenre" },
   { name: "FAQ", section: "faq" },
 ];
