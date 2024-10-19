@@ -1,16 +1,15 @@
-import { BeforeAfter } from "@/components/BeforeAfter";
 import ai from "@/assets/ai.jpg";
 import { Slider } from "@/components/Slider";
 import { AccordionSection } from "./Accordion";
-import SimilarSong from "./SimilarSong";
+import Instruction from "./Instruction";
 import SearchMovie from "./SearchMovie";
 import ChooseGender from "./ChooseGender";
 import { motion } from "framer-motion";
 import YoutubeSection from "./YoutubeSection";
 import CarauselSection from "./CarauselSection";
 import Reviews from "@/components/Reviews";
-import BeforeLady from "@/assets/beauty-before.jpg";
-import AfterLady from "@/assets/beauty-after.jpg";
+import ImproveQuality from "./ImproveQuality";
+import SimilarSongs from "./SimilarSongs";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -28,19 +27,46 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
         <h2 className="text-[24px] md:text-[36px] font-bolder">Отзывы</h2>
         <Reviews />
       </section>
-      <section className="py-10  w-full flex my-[96px]">
+
+      <section className="py-10  w-full flex my-[96px]" ref={sectionRefs.video}>
         <YoutubeSection />
       </section>
       <div ref={sectionRefs.features}>
         <CarauselSection />
       </div>
       <section
-        ref={sectionRefs.ai}
+        ref={sectionRefs.searchSimilarSongs}
         className="flex items-center justify-center py-10 my-[96px] bg-[#F6F6F6]"
       >
+        <SimilarSongs />
+      </section>
+
+      <section
+        ref={sectionRefs.improveQuality}
+        className="flex items-center justify-center py-10 my-[96px]"
+      >
+        <ImproveQuality />
+      </section>
+      <section
+        ref={sectionRefs.searchMovie}
+        className="py-10 flex w-full my-[96px]"
+      >
+        <SearchMovie />
+      </section>
+      <section className="flex items-center justify-center flex-col py-10  my-[96px] ">
+        <Instruction />
+      </section>
+      <section
+        ref={sectionRefs.identifyGenre}
+        className="py-10  w-full flex my-[96px]"
+      >
+        <ChooseGender />
+      </section>
+
+      <section className="flex items-center justify-center py-10 my-[96px] ">
         <div className=" px-3 gap-10 text-center flex flex-col justify-evenly w-full max-w-4xl">
           <h2 className="text-[24px] md:text-[36px] font-bolder">
-            Используйте возможности ИИ в нашем Telegram-боте!
+            Кроме этого, у TopMusicBot есть и другие плюсы:
           </h2>
           <motion.div
             className="w-full justify-between md:gap-3 flex items-center md:flex-row flex-col"
@@ -55,48 +81,6 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
             </div>
           </motion.div>
         </div>
-      </section>
-      <section
-        ref={sectionRefs.improveQuality}
-        className="flex items-center justify-center py-10 my-[96px]"
-      >
-        <div className="p-5 gap-10 text-center flex flex-col justify-evenly max-w-4xl">
-          <h2 className="text-[24px] md:text-[36px] font-bolder">
-            Улучшение качества изображений JPG
-          </h2>
-          <BeforeAfter beforeImage={BeforeLady} afterImage={AfterLady} />
-          <p className="mt-4 text-lg lg:text-xl">
-            Загрузите своё фото, и TopMusicBot сделает его более четким и
-            качественным! Воспользуйтесь нашим инструментом для улучшения
-            изображений прямо сейчас!
-          </p>
-        </div>
-      </section>
-      <section
-        ref={sectionRefs.searchMovie}
-        className="py-10 flex w-full my-[96px]"
-      >
-        <SearchMovie />
-      </section>
-      <section
-        ref={sectionRefs.searchSimilarSongs}
-        className="flex items-center justify-center flex-col py-10  my-[96px] "
-      >
-        <div className="p-8 text-center max-w-4xl">
-          <h2 className="text-[24px] md:text-[36px] font-bolder">
-            Как работает бот TopMusicBot
-          </h2>
-          <p className="mt-4 text-lg lg:text-xl">
-            Весь процесс занимает всего четыре шага:
-          </p>
-        </div>
-        <SimilarSong />
-      </section>
-      <section
-        ref={sectionRefs.identifyGenre}
-        className="py-10  w-full flex my-[96px]"
-      >
-        <ChooseGender />
       </section>
 
       <section
