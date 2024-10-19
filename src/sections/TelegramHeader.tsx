@@ -12,26 +12,30 @@ const fadeInUp = {
 const TelegramHeader = ({ sectionRefs }) => {
   return (
     <header
-      className="w-full min-h-[500px] md:bg-[url('/src/assets/header-tg.png')] bg-no-repeat bg-right  max-h-[500px] md:px-[100px] flex md:justify-start justify-center items-center py-10 mt-[80px]  overflow-hidden"
+      className="w-full min-h-[500px] md:bg-[url('/src/assets/telegram-for-section.png')] bg-no-repeat bg-right  max-h-[500px] md:px-[100px] flex md:justify-start justify-center items-center py-10 mt-[80px]  overflow-hidden"
       ref={sectionRefs}
       style={{
         backgroundSize: "800px",
       }}
     >
       <motion.div
-        className="flex flex-col w-full px-3 items-center justify-center md:justify-start md:items-start text-center md:text-left h-full  max-w-[550px] gap-8"
+        className="flex flex-col w-full px-3 items-center justify-center md:justify-start md:items-start text-center md:text-left h-full   gap-8"
         initial="hidden"
         whileInView="visible"
         variants={fadeInUp}
         viewport={{ once: true, amount: 0.3 }}
       >
         <h2 className="text-3xl md:text-4xl font-semibold leading-snug">
-          Скачивание с YouTube в 2 клика
+          Скачивание видео
         </h2>
-        <p className="text-lg text-gray-600">
-          Скачивайте видео и аудио с YouTube быстро и легко. Наш Telegram-бот
-          позволяет загружать контент всего за два клика, без необходимости
-          устанавливать дополнительное ПО.
+        <p className="text-lg text-gray-600 max-w-[700px]">
+          Хотите смотреть видео с YouTube без подключения к интернету?
+          Видеохостинг предлагает только 1 вариант – сохранение роликов с
+          подпиской Premium. Но сегодня оплатить его российской картой
+          невозможно. <br />
+          <br />
+          Хотите скачивать видео без ограничений? Воспользуйтесь TopMusicBot –
+          нашим ботом в Telegram!
         </p>
         <a
           href="https://t.me/Youtu2018bot"

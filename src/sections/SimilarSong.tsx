@@ -44,7 +44,7 @@ const SimilarSong = () => {
               Запуск бота
             </h5>
             <p className="font-[400] text-[14px] leading-[21px] text-center md:text-end max-w-[358px] w-full">
-              Найдите бота в Telegram и нажмите кнопку «Старт».
+              Откройте TopMusicBot в Telegram.
             </p>
           </div>
         </div>
