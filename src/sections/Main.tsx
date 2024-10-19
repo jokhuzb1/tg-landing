@@ -9,6 +9,8 @@ import { motion } from "framer-motion";
 import YoutubeSection from "./YoutubeSection";
 import CarauselSection from "./CarauselSection";
 import Reviews from "@/components/Reviews";
+import BeforeLady from "@/assets/beauty-before.jpg";
+import AfterLady from "@/assets/beauty-after.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 50 },
@@ -62,10 +64,7 @@ const TopMusicBotLanding = ({ sectionRefs }) => {
           <h2 className="text-[24px] md:text-[36px] font-bolder">
             Улучшение качества изображений JPG
           </h2>
-          <BeforeAfter
-            beforeImage="/src/assets/beauty-before.jpg"
-            afterImage="/src/assets/beauty-after.jpg"
-          />
+          <BeforeAfter beforeImage={BeforeLady} afterImage={AfterLady} />
           <p className="mt-4 text-lg lg:text-xl">
             Загрузите своё фото, и TopMusicBot сделает его более четким и
             качественным! Воспользуйтесь нашим инструментом для улучшения
