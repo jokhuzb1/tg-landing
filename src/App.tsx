@@ -7,7 +7,6 @@ import TelegramHeader from "./sections/TelegramHeader";
 
 const App = () => {
   const sectionRefs = {
-    video: useRef(null),
     features: useRef(null),
     ai: useRef(null),
     headSection: useRef(null),
