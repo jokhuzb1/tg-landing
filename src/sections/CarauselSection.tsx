@@ -25,23 +25,26 @@ const images = [
   },
   {
     img: { desktop: lady, mobile: ladyMobile },
-    words: `Плейлисты по настроению. Надоело подбирать музыку для поездки, пробежки или отдыха? Доверьте выбор нашему боту! TopMusicBot поберет уникальный плейлист, который будет в точности соответствовать вашему настроению. Он поможет заниматься повседневными делами с удовольствием.`,
+    words: "Улучшить качество JPG изображений: Загружайте фото для улучшения.",
   },
   {
     img: { desktop: cinema, mobile: cinemaMobile },
-    words: `Почему вам стоит воспользоваться TopMusicBot? Чтобы составить плейлист, мы разработали многофакторный алгоритм. Анализ звука и вашего настроения включает не только ваши вкусы, но и темп музыки, вокал, аранжировку и другие параметры.`,
+    words:
+      "Искать фильмы по сценам или типу: Описание сцены — и бот найдет фильм!",
   },
   {
     img: { desktop: music, mobile: musicMobile },
-    words: `Поэтому вы получаете не просто подборку для спорта или поездки! Плейлисты составляются быстро — на обработку уходит всего несколько минут.`,
-  },
-  {
-    img: { desktop: playlist, mobile: playlistMobile },
-    words: `Также TopMusicBot поможет, если вы хотите расширить свой плейлист новыми композициями. Вы можете узнать жанр музыки, которую слушаете, или найти похожие треки.`,
+    words:
+      "Находить похожие песни: Укажите название, и бот предложит похожие треки.",
   },
   {
     img: { desktop: gender, mobile: genderMobile },
-    words: `Попробуйте сами подобрать плейлист по настроению в TopMusicBot прямо сейчас! Наш бот доступен по _ссылке_.`,
+    words: "Определять жанр композиции: Просто отправьте название песни.",
+  },
+  {
+    img: { desktop: playlist, mobile: playlistMobile },
+    words:
+      "Создавать плейлисты по настроению: Опишите настроение, и бот соберет подходящие треки.",
   },
 ];
 
@@ -54,9 +57,13 @@ const CarauselSection = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
+
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   // Preload images
@@ -64,10 +71,14 @@ const CarauselSection = () => {
     const imagePromises = images.map((i) => {
       const img = new Image();
       img.src = isMobile ? i.img.mobile : i.img.desktop;
-      return new Promise((resolve) => (img.onload = resolve));
+      return new Promise((resolve) => {
+        img.onload = resolve;
+      });
     });
 
-    Promise.all(imagePromises).then(() => setImagesLoaded(true));
+    Promise.all(imagePromises).then(() => {
+      setImagesLoaded(true);
+    });
   }, [isMobile]);
 
   const handleClick = () => {
@@ -87,7 +98,10 @@ const CarauselSection = () => {
       spaceBetween={0}
       slidesPerView={1}
       loop={true}
-      autoplay={{ delay: 3000, disableOnInteraction: false }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
       modules={[Autoplay]}
       className="h-screen"
     >
@@ -100,33 +114,35 @@ const CarauselSection = () => {
             backgroundSize: "cover",
             backgroundImage: `url(${isMobile ? i.img.mobile : i.img.desktop})`,
           }}
-          className="w-full h-full px-2"
+          className=" w-full  h-full px-2"
         >
           <div className="flex justify-center items-center w-full h-full">
-            <div className="bg-[rgba(255, 255, 255, 0)] flex flex-col items-center py-2 px-4 backdrop-blur-lg max-w-[500px] backdrop-saturate-150 rounded-md">
+            <div className="bg-[rgba(255, 255, 255, 0)] flex justify-center items-center flex-col py-[8px] px-[16px] backdrop-blur-[21px] max-w-[500px]  backdrop-saturate-[138%]  rounded-md p-2 ">
               {i.isHeader ? (
                 <>
-                  <h1 className="font-bold text-2xl text-white md:text-3xl lg:text-4xl text-center w-full">
+                  <h1 className="font-bold text-[26px] text-white md:text-3xl lg:text-4xl text-center w-full">
                     {i.words}
                   </h1>
-                  <p className="my-4 text-lg max-w-[400px] overflow-hidden text-center text-white">
-                    TopMusicBot — ваш идеальный помощник в мире музыки. С
-                    помощью нашего бота вы можете создавать плейлисты, искать
-                    треки и наслаждаться музыкой в любое время.
+                  <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center text-white">
+                    TopMusicBot — ваш идеальный помощник в мире музыки и кино. С
+                    помощью нашего бота вы можете:
                   </p>
                 </>
               ) : (
-                <p className="my-4 text-lg max-w-[400px] text-center text-white">
+                <p className="my-4 text-[16px] max-w-[400px] md:text-[18px] overflow-hidden text-center text-white">
                   {i.words}
                 </p>
               )}
-              <Button
-                size="sm"
-                onClick={handleClick}
-                className="py-2 px-4 bg-red-600 mx-auto"
-              >
-                Open Channel
-              </Button>
+
+              <div className="w-full flex justify-center items-center">
+                <Button
+                  size="sm"
+                  onClick={handleClick}
+                  className="py-[8px] px-[16px] bg-red-600 mx-auto"
+                >
+                  Open Channel
+                </Button>
+              </div>
             </div>
           </div>
         </SwiperSlide>
