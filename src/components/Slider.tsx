@@ -24,7 +24,7 @@ const text = [
 
 export const Slider = () => {
   return (
-    <div className="w-full  max-w-2xl mx-auto">
+    <div className="w-full  max-w-1xl mx-auto">
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
@@ -40,11 +40,11 @@ export const Slider = () => {
       >
         {text.map((i, index) => (
           <SwiperSlide key={index} className="w-full">
-            <div className="flex items-center justify-center flex-col ">
+            <div className="flex items-center justify-center flex-col max-w-[400px] w-full ">
               <h3 className="font-[500] md:text-start text-center text-[19px] mb-1 w-full ">
                 {i.t}
               </h3>
-              <p className="font-[400] leading-[24px] text-gray-500 md:text-start text-center">
+              <p className="font-[400] leading-[24px] text-gray-500  md:text-start text-center">
                 {i.b}
               </p>
             </div>

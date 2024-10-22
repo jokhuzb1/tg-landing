@@ -12,7 +12,7 @@ const fadeInUp = {
 const TelegramHeader = ({ sectionRefs }) => {
   return (
     <header
-      className="w-full min-h-[500px] md:bg-[url('/src/assets/header-tg.png')] bg-no-repeat bg-right  max-h-[500px] md:px-[100px] flex md:justify-start justify-center items-center py-10 mt-[80px]  overflow-hidden"
+      className="w-full max-w-[1350px] mx-auto min-h-[500px] md:bg-[url('/src/assets/header-tg.png')] bg-no-repeat bg-right  max-h-[500px] md:px-[100px] flex md:justify-start justify-center items-center py-10 mt-[80px]  overflow-hidden"
       ref={sectionRefs}
       style={{
         backgroundSize: "800px",
@@ -37,7 +37,7 @@ const TelegramHeader = ({ sectionRefs }) => {
           href="https://t.me/Youtu2018bot"
           className="bg-red-600 hover:bg-red-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg"
         >
-          Продолжить
+          Открыть Телеграм
         </a>
       </motion.div>
     </header>

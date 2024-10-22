@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div>
       <Navbar scrollToSection={scrollToSection} />
-      <div className="max-w-[1350px] mx-auto">
+      <div>
         <TelegramHeader sectionRefs={sectionRefs.headSection} />
         <Main sectionRefs={sectionRefs} />
       </div>

@@ -4,45 +4,39 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
-import lady from "/src/assets/kinchabi.png";
-import ladyMobile from "/src/assets/kinchabi.webp";
-import cinema from "/src/assets/3d-cinema-film-reel.jpg";
-import cinemaMobile from "/src/assets/3d-cinema-film-reel.webp";
-import music from "/src/assets/music-notes.png";
-import musicMobile from "/src/assets/music-notes.webp";
-import playlist from "/src/assets/playlist.png";
-import playlistMobile from "/src/assets/playlist.webp";
-import header from "/src/assets/header.jpg";
-import headerMobile from "/src/assets/header.webp";
-import gender from "/src/assets/gender-music.png";
-import genderMobile from "/src/assets/gender-music.webp";
+import lady from "/src/assets/rose.webp";
+import cinema from "/src/assets/cinema.webp";
+import music from "/src/assets/headphone-guy_1.webp";
+import playlist from "/src/assets/microphone.webp";
+import header from "/src/assets/robo-singer.webp";
+import gender from "/src/assets/lady.webp";
 
 const images = [
   {
-    img: { desktop: header, mobile: headerMobile },
+    img: header,
     words: "Добро пожаловать в TopMusicBot! 🎶",
     isHeader: true,
   },
   {
-    img: { desktop: lady, mobile: ladyMobile },
+    img: lady,
     words: "Улучшить качество JPG изображений: Загружайте фото для улучшения.",
   },
   {
-    img: { desktop: cinema, mobile: cinemaMobile },
+    img: cinema,
     words:
       "Искать фильмы по сценам или типу: Описание сцены — и бот найдет фильм!",
   },
   {
-    img: { desktop: music, mobile: musicMobile },
+    img: music,
     words:
       "Находить похожие песни: Укажите название, и бот предложит похожие треки.",
   },
   {
-    img: { desktop: gender, mobile: genderMobile },
+    img: gender,
     words: "Определять жанр композиции: Просто отправьте название песни.",
   },
   {
-    img: { desktop: playlist, mobile: playlistMobile },
+    img: playlist,
     words:
       "Создавать плейлисты по настроению: Опишите настроение, и бот соберет подходящие треки.",
   },
@@ -70,7 +64,7 @@ const CarauselSection = () => {
   useEffect(() => {
     const imagePromises = images.map((i) => {
       const img = new Image();
-      img.src = isMobile ? i.img.mobile : i.img.desktop;
+      img.src = i.img;
       return new Promise((resolve) => {
         img.onload = resolve;
       });
@@ -112,7 +106,7 @@ const CarauselSection = () => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
-            backgroundImage: `url(${isMobile ? i.img.mobile : i.img.desktop})`,
+            backgroundImage: `url(${i.img})`,
           }}
           className=" w-full  h-full px-2"
         >
@@ -140,7 +134,7 @@ const CarauselSection = () => {
                   onClick={handleClick}
                   className="py-[8px] px-[16px] bg-red-600 mx-auto"
                 >
-                  Open Channel
+                  Открыть Бот
                 </Button>
               </div>
             </div>
