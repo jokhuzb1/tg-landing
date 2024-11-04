@@ -180,7 +180,7 @@ const Navbar = ({ scrollToSection }) => {
               {item.name}
             </button>
           ))}
-          <a className="block bg-[#0F172A] text-white py-2 px-4 rounded-md">
+          <a href="https://t.me/Youtu2018bot" className="block bg-[#0F172A] text-white py-2 px-4 rounded-md">
             Telegram Bot
           </a>
         </div>
